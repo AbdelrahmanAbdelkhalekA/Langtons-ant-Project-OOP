@@ -6,7 +6,7 @@ Gary the snail exists on a Board which consists of an N by N grid of Cells. The 
 
 A N by N square grid is intialized where N is always an odd number where also the Cell class outputs if the cells are either white or black. The ant start at the center of the grid with an orientation initially intialized with an up orientation. The number of steps the ant preforms is decided by the user.
  
-    1.If Gary is on a white square turn 90 deg clockwise, flip the color of the square, and move forward one unit. 
+    If Gary is on a white square turn 90 deg clockwise, flip the color of the square, and move forward one unit. 
     2.If Gary is on a black square turn 90 deg counterclockwise, flip the color of the square, and move forward one unit. 
  
  ☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲
