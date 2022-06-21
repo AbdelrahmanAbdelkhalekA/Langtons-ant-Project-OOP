@@ -9,7 +9,6 @@ A N by N square grid is intialized where N is always an odd number where also th
     1.If Gary is on a white square turn 90 deg clockwise, flip the color of the square, and move forward one unit. 
     2.If Gary is on a black square turn 90 deg counterclockwise, flip the color of the square, and move forward one unit. 
  
- 
 ## Main Funtion:
  
 The main function is compiled into an executable named FindGary. The main function shall accept two (2) or three (3) command line arguments and will be called either as ./FindGary BoardSize Steps or ./FindGary BoardSize Steps OutputFilename where BoardSize and Steps will be unsigned integer values and OutputFilename will be a char array. The main program should construct a Board object, optionally sets the output filename if given as a command line argument, and shall execute Gary's movement through Board's member function.
@@ -36,7 +35,7 @@ Gary shall move around the board when the Board::move_gary(unsigned int steps) f
 
 the format is given by [Gary Location] {(row), (col)} (orientation) [Row 0] (col 0 color) (col 1 color) ... (col N-1 color) [Row 1] ... [Row (N-1)] ... (col N-1 color) where values within ( ) are to be filled in with program values. (col i color) shall be either "0" for "white" or "1" for "black". This output will either be to standard output, i.e., std::cout, if a filename command line argument is not provided or will be printed to the filename given in the argument (students should use the ofstream object for file output. Note that C's fprintf will also be okay). The filename shall be set with the void Board::setOutputFilename(std::string) member function.
 
-## Cell Class
+## Cell Class:
 
 This class will be used to define the N by N board in the final solution (there will be N 2 Cell objects which define the board). You are to program the Cell class according to the following design criteria:
 
