@@ -6,7 +6,7 @@ Gary the snail exists on a Board which consists of an N by N grid of Cells. The 
 
 A N by N square grid is intialized where N is always an odd number where also the Cell class outputs if the cells are either white or black. The ant start at the center of the grid with an orientation initially intialized with an up orientation. The number of steps the ant preforms is decided by the user.
  
-    If Gary is on a white square turn 90 deg clockwise, flip the color of the square, and move forward one unit. 
+    1.If Gary is on a white square turn 90 deg clockwise, flip the color of the square, and move forward one unit. 
     2.If Gary is on a black square turn 90 deg counterclockwise, flip the color of the square, and move forward one unit. 
  
  ☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲
@@ -25,17 +25,17 @@ The Board class shall be constructed given an unsigned integer parameter that de
 
 Gary shall move around the board when the Board::move_gary(unsigned int steps) function is called. Each step shall be one step of Langton's ant as defined above, i.e., change Gary's orientation based on the Cell input, change the cell color, and move Gary forward one unit. The board class shall print the state of the board at every step. See the below example with a boardSize input of 5 for 10 steps:
 
-[Gary Location] {2, 2} [Gary Orientation] up [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 0 0 0 0 [Row 3] 0 0 0 0 0 [Row 4] 0 0 0 0 0
-[Gary Location] {2, 3} [Gary Orientation] right [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 0 1 0 0 [Row 3] 0 0 0 0 0 [Row 4] 0 0 0 0 0
-[Gary Location] {3, 3} [Gary Orientation] down [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 0 1 1 0 [Row 3] 0 0 0 0 0 [Row 4] 0 0 0 0 0
-[Gary Location] {3, 2} [Gary Orientation] left [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 0 1 1 0 [Row 3] 0 0 0 1 0 [Row 4] 0 0 0 0 0
-[Gary Location] {2, 2} [Gary Orientation] up [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 0 1 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
-[Gary Location] {2, 1} [Gary Orientation] left [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 0 0 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
-[Gary Location] {1, 1} [Gary Orientation] up [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 1 0 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
-[Gary Location] {1, 2} [Gary Orientation] right [Row 0] 0 0 0 0 0 [Row 1] 0 1 0 0 0 [Row 2] 0 1 0 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
-[Gary Location] {2, 2} [Gary Orientation] down [Row 0] 0 0 0 0 0 [Row 1] 0 1 1 0 0 [Row 2] 0 1 0 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
-[Gary Location] {2, 1} [Gary Orientation] left [Row 0] 0 0 0 0 0 [Row 1] 0 1 1 0 0 [Row 2] 0 1 1 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
-[Gary Location] {3, 1} [Gary Orientation] down [Row 0] 0 0 0 0 0 [Row 1] 0 1 1 0 0 [Row 2] 0 0 1 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
+    [Gary Location] {2, 2} [Gary Orientation] up [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 0 0 0 0 [Row 3] 0 0 0 0 0 [Row 4] 0 0 0 0 0
+    [Gary Location] {2, 3} [Gary Orientation] right [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 0 1 0 0 [Row 3] 0 0 0 0 0 [Row 4] 0 0 0 0 0
+    [Gary Location] {3, 3} [Gary Orientation] down [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 0 1 1 0 [Row 3] 0 0 0 0 0 [Row 4] 0 0 0 0 0
+    [Gary Location] {3, 2} [Gary Orientation] left [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 0 1 1 0 [Row 3] 0 0 0 1 0 [Row 4] 0 0 0 0 0
+    [Gary Location] {2, 2} [Gary Orientation] up [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 0 1 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
+    [Gary Location] {2, 1} [Gary Orientation] left [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 0 0 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
+    [Gary Location] {1, 1} [Gary Orientation] up [Row 0] 0 0 0 0 0 [Row 1] 0 0 0 0 0 [Row 2] 0 1 0 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
+    [Gary Location] {1, 2} [Gary Orientation] right [Row 0] 0 0 0 0 0 [Row 1] 0 1 0 0 0 [Row 2] 0 1 0 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
+    [Gary Location] {2, 2} [Gary Orientation] down [Row 0] 0 0 0 0 0 [Row 1] 0 1 1 0 0 [Row 2] 0 1 0 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
+    [Gary Location] {2, 1} [Gary Orientation] left [Row 0] 0 0 0 0 0 [Row 1] 0 1 1 0 0 [Row 2] 0 1 1 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
+    [Gary Location] {3, 1} [Gary Orientation] down [Row 0] 0 0 0 0 0 [Row 1] 0 1 1 0 0 [Row 2] 0 0 1 1 0 [Row 3] 0 0 1 1 0 [Row 4] 0 0 0 0 0
 
 
 the format is given by [Gary Location] {(row), (col)} (orientation) [Row 0] (col 0 color) (col 1 color) ... (col N-1 color) [Row 1] ... [Row (N-1)] ... (col N-1 color) where values within ( ) are to be filled in with program values. (col i color) shall be either "0" for "white" or "1" for "black". This output will either be to standard output, i.e., std::cout, if a filename command line argument is not provided or will be printed to the filename given in the argument (students should use the ofstream object for file output. Note that C's fprintf will also be okay). The filename shall be set with the void Board::setOutputFilename(std::string) member function.
