@@ -6,14 +6,14 @@ Gary the snail exists on a Board which consists of an N by N grid of Cells. The 
 
 A N by N square grid is intialized where N is always an odd number where also the Cell class outputs if the cells are either white or black. The ant start at the center of the grid with an orientation initially intialized with an up orientation. The number of steps the ant preforms is decided by the user.
  
- =================== If Gary is on a white square turn 90 deg clockwise, flip the color of the square, and move forward one unit =====================================
- =================== If Gary is on a black square turn 90 deg counterclockwise, flip the color of the square, and move forward one unit. =============================
+    1.If Gary is on a white square turn 90 deg clockwise, flip the color of the square, and move forward one unit. 
+    2.If Gary is on a black square turn 90 deg counterclockwise, flip the color of the square, and move forward one unit. 
  
  ☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲
  
  Main Funtion:
  
- The main function will be compiled into an executable named FindGary. The main function shall accept two (2) or three (3) command line arguments and will be called either as ./FindGary BoardSize Steps or ./FindGary BoardSize Steps OutputFilename where BoardSize and Steps will be unsigned integer values and OutputFilename will be a char array. The main program should construct a Board object, optionally shall set the output filename if given as a command line argument, and shall execute Gary's movement through Board's member function.
+The main function is compiled into an executable named FindGary. The main function shall accept two (2) or three (3) command line arguments and will be called either as ./FindGary BoardSize Steps or ./FindGary BoardSize Steps OutputFilename where BoardSize and Steps will be unsigned integer values and OutputFilename will be a char array. The main program should construct a Board object, optionally sets the output filename if given as a command line argument, and shall execute Gary's movement through Board's member function.
  
 ☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲☲
  
@@ -57,14 +57,14 @@ This class is the "Ant" in "Langton's Ant". Gary moves around the grid of cells 
 
 Gary Class:
 
-Gary shall be constructed with a parameterized constructor accepting an unsigned integer input parameter representing the size of the board (denote here as BoardSize). Gary shall initialize his position to be the middle cell of the board, e.g., if the BoardSize is given as 5 Gary would be initialized at index (2,2). The Gary constructor should assume the parameter given is odd (and therefore you should make sure the parameter is odd before constructing the Gary-type member of Board)
+Gary is constructed with a parameterized constructor accepting an unsigned integer input parameter representing the size of the board (denote here as BoardSize). Gary shall initialize his position to be the middle cell of the board, e.g., if the BoardSize is given as 5 Gary would be initialized at index (2,2). The Gary constructor should assume the parameter given is odd (and therefore you should make sure the parameter is odd before constructing the Gary-type member of Board)
 
-Gary shall disallow default construction, i.e., Gary() = delete;. Note this means you will either have to allocate in the Board class via dynamic memory allocation or construct the Gary-type member via the Board constructor's member initialization list (the ternary operator is how I constructed Gary in the member initialization list).
+Gary is an disallowed default construction, i.e., Gary() = delete;. Note this means you will either have to allocate in the Board class via dynamic memory allocation or construct the Gary-type member via the Board constructor's member initialization list (the ternary operator is how I constructed Gary in the member initialization list).
 
-Gary shall contain a public member function get_location which accepts no input and returns a std::tuple<unsigned int, unsigned int> type where the 0th element denotes the row and the 1st element denotes the column Gary current occupies.
+Gary contains a public member function get_location which accepts no input and returns a std::tuple<unsigned int, unsigned int> type where the 0th element denotes the row and the 1st element denotes the column Gary current occupies.
 
-Gary shall contain a public member function which returns type void and accepts a Cell pointer called Gary::move(Cell*) which shall (a) alter Gary's orientation based on the Cell's color (b) change the Cell's color (c) move Gary one unit forward in the new orientation.
+Gary contains a public member function which returns type void and accepts a Cell pointer called Gary::move(Cell*) which shall (a) alter Gary's orientation based on the Cell's color (b) change the Cell's color (c) move Gary one unit forward in the new orientation.
 
-Gary shall wrap around the board when moving out of bounds, e.g., from the top row to the bottom row. See the last section for more information.
+Gary wraps around the board when moving out of bounds, e.g., from the top row to the bottom row. 
 
-Gary shall contain a public member function which returns type orientation which is a scoped enumeration type, i.e., enum class orientation, which has values (in order) "up, right, down, left".
+Gary contains a public member function which returns type orientation which is a scoped enumeration type, i.e., enum class orientation, which has values (in order) "up, right, down, left".
